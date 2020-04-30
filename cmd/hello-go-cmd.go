@@ -5,6 +5,8 @@ import (
 	_ "bufio"
 	"errors"
 	"fmt"
+	"github.com/sheikhusmanshakeel/hello-go/pkg/crawler"
+	"github.com/sheikhusmanshakeel/hello-go/pkg/indexer"
 	"io"
 	_ "io"
 	"math"
@@ -45,10 +47,10 @@ func (v Vertex) Scale(f float64) {
 	v.Y = v.Y * f
 }
 
+// Main function used for stripping and crawling
 func main() {
-	v := Vertex{3, 4}
-	v.Scale(10)
-	fmt.Println(v.Abs())
+	crawler.Crawl()
+	indexer.IndexURL(56)
 }
 
 func slices_and_arrays(){
